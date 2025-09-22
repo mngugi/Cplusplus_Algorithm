@@ -8,7 +8,7 @@
 #include <algorithm>
 
 int main() {
-    std::vector<std::string> cars = {"Volvo", "BMW", "Ford", "Ford", "Mazda"};
+    std::vector<std::string> cars = {"Volvo","Ford","Mazda", "BMW", "Ford", "Ford", "Mazda"};
 
     // find the first pair of equal adjacent elements
     auto it = std::adjacent_find(cars.begin(), cars.end());
