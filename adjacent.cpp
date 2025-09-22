@@ -12,11 +12,11 @@ adjacent_find
 
 #include <iostream>
 #include <vector>
+#include <string>
 #include <algorithm>
-using namespace std;
 
 int main() {
-  vector<string> cars = {"Volvo", "BMW", "Ford", "Ford", "Mazda"};
+  vector<std::string> cars = {"Volvo", "BMW", "Ford", "Ford", "Mazda"};
   // find the first pair of elements that are equal to each other
   // in this case, the first pair of elements that are equal to each other is "Ford"
   // so the iterator will be the second "Ford"
@@ -25,7 +25,6 @@ int main() {
   // so the iterator will be the third "Mazda"
   // and the value of the iterator will be "Mazda"
    
-  
   auto it = adjacent_find(cars.begin(), cars.end());
 
   if (it != cars.end()) {
