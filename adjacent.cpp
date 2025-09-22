@@ -1,14 +1,6 @@
-/*
-adjacent_find
-    - Returns the first iterator to the first pair of elements that are equal to each other (as determined by the specified predicate).
-    - If no such pair is found, the function returns last.
-*/
-//reference:
-// https://cplusplus.com/reference/algorithm/adjacent_find/
-/*
-- start: the first iterator to the first pair of elements that are equal to each other
-- end: the last iterator to the last pair of elements that are equal to each other.
-*/
+
+// C++ algorithm adjacent_find() function
+// References : https://www.w3schools.com/cpp/ref_algorithm_adjacent_find.asp
 
 #include <iostream>
 #include <vector>
@@ -16,21 +8,26 @@ adjacent_find
 #include <algorithm>
 
 int main() {
-  vector<std::string> cars = {"Volvo", "BMW", "Ford", "Ford", "Mazda"};
-  // find the first pair of elements that are equal to each other
-  // in this case, the first pair of elements that are equal to each other is "Ford"
-  // so the iterator will be the second "Ford"
-  // and the value of the iterator will be "Ford"
-  // the second pair of elements that are equal to each other is "Mazda"
-  // so the iterator will be the third "Mazda"
-  // and the value of the iterator will be "Mazda"
-   
-  auto it = adjacent_find(cars.begin(), cars.end());
+    std::vector<std::string> cars = {"Volvo", "BMW", "Ford", "Ford", "Mazda"};
 
-  if (it != cars.end()) {
-    cout << *it << " Appears twice in a row\n";
-  } else {
-    cout << "There are no Adjacent elements\n";
-  }
-  return 0;
+    // find the first pair of equal adjacent elements
+    auto it = std::adjacent_find(cars.begin(), cars.end());
+
+    if (it != cars.end()) {
+        std::cout << *it << " appears twice in a row\n";
+    } else {
+        std::cout << "There are no adjacent equal elements\n";
+    }
+
+    return 0;
 }
+
+/*
+The adjacent_find() function finds the first adjacent pair in a data range and returns
+an iterator pointing to the first element in the pair.
+An adjacent pair is a pair of elements that have the same value and are next to each
+other (adjacent) in the data range.
+startRequired. An iterator pointing to the start of the data range being searched.
+end	Required. An iterator pointing to the end of the data range being searched.
+Elements up to this position will be searched, but the element at this position will not be included.
+*/
