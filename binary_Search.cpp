@@ -1,3 +1,14 @@
+/*
+The binary_search() function is an efficient algorithm to check if a value exists in a data range.
+
+The data range must already be sorted. If the data range is not sorted then the function may return an incorrect result.
+The sort() function can be used to sort elements in the data range.
+
+The range of data is specified by iterators.
+
+
+**/
+
 #include <iostream>
 #include <vector>
 #include <string>
